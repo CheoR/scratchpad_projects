@@ -18,20 +18,29 @@ html {
 
 body {
   min-height: 100vh;
+
+  grid-template-columns: 20% 50% 80%;
+  /* This determines the number of verticle rows and their respective heights */
+  grid-template-rows: 25% 100px auto;
 }
 
 .banner {
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.banner,
+.dropdown,
+.bottom_panel {
   background: rgb(249, 159, 1);
   background: linear-gradient(
     90deg,
     rgba(249, 159, 1, 1) 0%,
     rgba(244, 202, 18, 1) 100%
   );
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 .banner__img {
@@ -40,13 +49,31 @@ body {
 
 .banner__card_info {
   background: lightgreen;
-  width: 490px;
   display: flex;
   flex-direction: column;
-  height: 380px;
+  /* max-width: 490px;
+  max-height: 380px; */
 }
 
+/* .credit_card {
+  height: 87%;
+}
+
+.banner__card_info span {
+  font-size: 1.375rem;
+} */
 /*
+  54px = 3.375rem
+  40px = 2.5rem
+  32px = 2rem
+  30px = 1.875rem
+  28px = 1.75rem
+  22px = 1.375rem
+  20px = 1.25rem
+  16px = 1rem
+
+
+
   MyriadPro-Lig - heavy weight
     3.375rem;
     54px - Safe way to pay online.
@@ -76,3 +103,39 @@ payments online, with ease
     1rem
     16px - * Visa’s Zero Liability Policy does not apply to certain commercial card and anonymous prepaid card transactions or transactions not processed by Visa. Cardholders must use care in
 */
+
+/*
+  xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 960px
+  lg, large: 1280px
+  xl, extra-large: 1920px
+
+*/
+
+.bottom_panel {
+  flex: 1;
+  font-size: 1.875rem;
+}
+
+.bottom_panel div:nth-child(2) {
+  padding: 0.3rem;
+}
+
+.bottom_panel__img_container {
+  height: 172px;
+}
+
+.bottom_panel__img {
+  width: 100%;
+}
+
+.legal {
+  font-size: 1rem;
+}
+
+.bottom_panel,
+.legal__logos {
+  display: flex;
+  justify-content: space-between;
+}
