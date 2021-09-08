@@ -11,30 +11,36 @@
   line-height: 1.5;
 }
 
-html {
-  height: 100%;
+html,
+body {
+  min-height: 100%;
   font-size: 16px;
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
+}
 
-  grid-template-columns: 20% 50% 80%;
-  /* This determines the number of verticle rows and their respective heights */
-  grid-template-rows: 25% 100px auto;
+img {
+  display: block;
 }
 
 .banner {
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
-.banner,
-.dropdown,
+.banner__img {
+  width: 100%;
+  padding-top: 10px;
+}
+
 .bottom_panel {
+  padding: 1rem;
+}
+
+select[name="dropdown"],
+.banner,
+.bottom_panel p {
   background: rgb(249, 159, 1);
   background: linear-gradient(
     90deg,
@@ -43,26 +49,84 @@ body {
   );
 }
 
-.banner__img {
-  margin-top: 15px;
+.middle_panel {
+  padding: 1rem;
 }
 
-.banner__card_info {
-  background: lightgreen;
+.middle_panel h2 {
+  text-align: center;
+}
+
+.middle_panel__services {
   display: flex;
   flex-direction: column;
-  /* max-width: 490px;
-  max-height: 380px; */
+  gap: 1rem;
 }
 
-/* .credit_card {
-  height: 87%;
+.card {
+  display: flex;
+  flex-direction: column;
 }
 
-.banner__card_info span {
-  font-size: 1.375rem;
-} */
+.card span {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bottom_panel p {
+  padding: 1rem;
+}
+
+.bottom_panel__img_container {
+  width: 100%;
+}
+
+.bottom_panel__img {
+  width: 100%;
+}
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 0.5rem;
+}
+
+.legal__logos {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 /*
+
+FILE INFO
+  Page: 1300 x 1870
+  Columns:
+   250/1300 ~ 19%
+   650/1300 ~ 50%
+   1047/1300 ~ %81
+  Rows:
+   465/1870 ~ 25%
+   605/1870 ~ 32%
+   805/1870 ~ 43%
+
+   890/1870 ~ 48%
+   935/1870 ~ 50%
+   970/1870 ~ 52%
+
+   1010/1870 ~ 54%
+   1105/1870 ~ 59%
+   1740/1870 ~ 95%
+
+
+  xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 960px
+  lg, large: 1280px
+  xl, extra-large: 1920px
+
   54px = 3.375rem
   40px = 2.5rem
   32px = 2rem
@@ -103,39 +167,3 @@ payments online, with ease
     1rem
     16px - * Visa’s Zero Liability Policy does not apply to certain commercial card and anonymous prepaid card transactions or transactions not processed by Visa. Cardholders must use care in
 */
-
-/*
-  xs, extra-small: 0px
-  sm, small: 600px
-  md, medium: 960px
-  lg, large: 1280px
-  xl, extra-large: 1920px
-
-*/
-
-.bottom_panel {
-  flex: 1;
-  font-size: 1.875rem;
-}
-
-.bottom_panel div:nth-child(2) {
-  padding: 0.3rem;
-}
-
-.bottom_panel__img_container {
-  height: 172px;
-}
-
-.bottom_panel__img {
-  width: 100%;
-}
-
-.legal {
-  font-size: 1rem;
-}
-
-.bottom_panel,
-.legal__logos {
-  display: flex;
-  justify-content: space-between;
-}
